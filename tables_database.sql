@@ -25,22 +25,14 @@ CREATE TABLE booking.users(
     id INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL ,
     user_name VARCHAR(30) NOT NULL UNIQUE ,
     password VARCHAR(60) NOT NULL,
-    id_cinema INT(11) NOT NULL ,
+    role_id VARCHAR(11) NOT NULL,
+    id_cinema INT(11),
     FOREIGN KEY (id_cinema) REFERENCES cinemas(id)
 )   ENGINE=InnoDB;
 
-CREATE TABLE booking.admins(
+CREATE TABLE booking.roles(
     id INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL ,
-    user_name VARCHAR(30) NOT NULL UNIQUE ,
-    password VARCHAR(60) NOT NULL
-)   ENGINE=InnoDB;
-
-CREATE TABLE booking.cinema_admin(
-    id_admin INT(11) NOT NULL ,
-    id_cinema INT(11) NOT NULL ,
-    PRIMARY KEY (id_cinema,id_admin),
-    FOREIGN KEY (id_admin) REFERENCES admins(id),
-    FOREIGN KEY (id_cinema) REFERENCES cinemas(id)
+    name VARCHAR(30) NOT NULL
 )   ENGINE=InnoDB;
 
 CREATE TABLE booking.halls(

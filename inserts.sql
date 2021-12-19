@@ -1,33 +1,27 @@
 /** Insert into table customers **/
-INSERT INTO customers (first_name, last_name, email, password, birth_day,tel_number) values 
+INSERT INTO customers (first_name, last_name, email, password, birth_day,tel_number) VALUES 
 ('Peterus', 'Abramovitz', 'ppembry0@phoca.cz', '$2y$10$7HeFCHLE8gmlYF6s/xSEfej0H9ZjrGxLsoJA2OzWapaWuV6VJPDtC', '1990-05-21','0674176789'),
 ('Janith', 'Demogeot', 'jdoley1@odnoklassniki.ru', '$2y$10$9m6xvrKpi6yh1.1hY.kTwOLLphFNmPN6wPqiCXFnBQpsgLsgGPyK.', '1982-11-02','0636221478'),
 ('Oliviero', 'McKague', 'omarjoribanks2@w3.org', '$2y$10$6mf6rGb1x9t.hsiDisWDae0hOixX/7UoHpbyeYEsMuuaOYpNLPvYi', '2000-12-31','0716475899'),
 ('Melinde', 'Murrow', 'mchrstine3@privacy.gov.au', '$2y$10$bKzTRj5DcZ89Ha9kt5DRqecXwj7.IuNbrbl0H965HhbNTHigQex92', '1982-08-16','0717642589');
 
 /** Insert into table cinemas **/
-INSERT INTO cinemas (name, adress, postal_code, city, tel_number, halls_number) values 
+INSERT INTO cinemas (name, adress, postal_code, city, tel_number, halls_number) VALUES 
 ('ciel bleu', '106 avenue des 4 cantons', '74000','Annemasse','0235469874', 7),
 ('Rivalee', '2012 syba 16 ', '75000','Thonon','' '0123525468', 5),
 ('Birk', 'socoma 1 N 1008', '70000','Ivetot', '0125468978', 8);
 
+/** Insert into table roles **/
+INSERT INTO roles (name) VALUES ('admin'),('manager');
+
 /** Insert into table users (managers) **/
-INSERT INTO users (user_name, password,id_cinema) values 
-('Flossy55', '$2y$10$9Mqq.W/fSYlL4wVuYWmqb.TbF2pQDvk1HwEfcYZD59DRiLLNzmkla',1),
-('Jenine02', '$2y$10$tskSAHmapUdZQsk5YSYGTuXM/dBCykn.TNcRtyIh/ygAf9XOzucLm',2),
-('Maddy_11', '$2y$10$PSdPi3vgnGjF5tYk71hqq.5iQ9hsN3e0KHZ5aJQhtkhfT6ftUX8Bi',3);
-
-/** Insert into table admins **/
-INSERT INTO admins (user_name, password) values 
-('admin_cool', '$2y$10$9Mqqsk/fSYlL4wVuYWmqb.TbF2pQDvk1HwEfcYZD59DRiLLNzmkla'),
-('bahadi', '$2y$1sldskSAHmapUdZQsk5YSYGTuXM/dBCykn.TNcRtyIh/ygAf9XOzucLm'),
-('moussa_ca', '$2y$10$PSdPi3vksldF5tYk71hqq.5iQ9hsN3e0KHZ5aJQhtkhfT6ftUX8Bi');
-
-/** Insert into table cinema_admin **/
-INSERT INTO cinema_admin (id_cinema, id_admin) values (1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3);
+INSERT INTO users (user_name, password,role_id,id_cinema) VALUES 
+('Flossy55', '$2y$10$9Mqq.W/fSYlL4wVuYWmqb.TbF2pQDvk1HwEfcYZD59DRiLLNzmkla',2,1),
+('Jenine02', '$2y$10$tskSAHmapUdZQsk5YSYGTuXM/dBCykn.TNcRtyIh/ygAf9XOzucLm',2,2),
+('Maddy_11', '$2y$10$PSdPi3vgnGjF5tYk71hqq.5iQ9hsN3e0KHZ5aJQhtkhfT6ftUX8Bi',1,NULL);
 
 /**Insert into table halls **/
-INSERT INTO halls (name,number_places,id_cinema) values 
+INSERT INTO halls (name,number_places,id_cinema) VALUES 
 ('D200',100,1),
 ('D102',200,1),
 ('E013',100,1),
@@ -60,7 +54,7 @@ Nunc quis quam dolor. Pellentesque sem purus, bibendum sed semper ut, porttitor 
 aliquet tellus et ante iaculis hendrerit.');
 
 /** Insert into table seances **/
-INSERT INTO seances (date,time,id_hall,id_movie) values 
+INSERT INTO seances (date,time,id_hall,id_movie) VALUES 
 ('2021-02-20','17:15:00',1,1),
 ('2021-07-20','18:15:00',4,2),
 ('2021-01-12','18:15:00',5,2),
