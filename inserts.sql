@@ -18,11 +18,12 @@ INSERT INTO roles (name) VALUES ('admin'),('manager');
 INSERT INTO users (user_name, password,role_id,id_cinema) VALUES 
 ('Flossy55', '$2y$10$9Mqq.W/fSYlL4wVuYWmqb.TbF2pQDvk1HwEfcYZD59DRiLLNzmkla',2,1),
 ('Jenine02', '$2y$10$tskSAHmapUdZQsk5YSYGTuXM/dBCykn.TNcRtyIh/ygAf9XOzucLm',2,2),
-('Maddy_11', '$2y$10$PSdPi3vgnGjF5tYk71hqq.5iQ9hsN3e0KHZ5aJQhtkhfT6ftUX8Bi',1,NULL);
+('Marie03', '$2y$10$tskSAHmapUdZQsk5YSYGTuX1445dsjklmNcRtyIh/ygAf9XOzucLm',2,3),
+('Maddy11', '$2y$10$PSdPi3vgnGjF5tYk71hqq.5iQ9hsN3e0KHZ5aJQhtkhfT6ftUX8Bi',1,NULL);
 
 /**Insert into table halls **/
 INSERT INTO halls (name,number_places,id_cinema) VALUES 
-('D200',100,1),
+('D200',200,1),
 ('D102',200,1),
 ('E013',100,1),
 ('D201',300,1),
@@ -33,7 +34,7 @@ INSERT INTO halls (name,number_places,id_cinema) VALUES
 ('B916',100,2),
 ('D103',300,2),
 ('I105',200,2),
-('D913',100,3),
+('D913',170,3),
 ('E654',200,3),
 ('Q123',100,3),
 ('F7S6',100,3);
@@ -56,18 +57,18 @@ aliquet tellus et ante iaculis hendrerit.');
 /** Insert into table seances **/
 INSERT INTO seances (date,time,id_hall,id_movie) VALUES 
 ('2021-02-20','17:15:00',1,1),
-('2021-07-20','18:15:00',4,2),
-('2021-01-12','18:15:00',5,2),
+('2021-07-20','18:15:00',7,2),
+('2021-01-12','16:15:00',12,2),
 ('2021-03-03','19:15:00',3,3);
 
 /** Insert into table prices **/
 INSERT INTO prices (type_price,price) VALUES ('junior' ,'5.90'),('student','7.60'),('adult','9.20');
 
 /** Insert into table booking **/
-INSERT INTO booking (is_payed, id_customer, id_seance) VALUES (0,1,1),(1,2,2),(1,3,1);
+INSERT INTO booking (is_payed, id_customer, id_seance) VALUES (0,1,1),(1,2,2),(1,3,1),(1,4,4);
 
 /** Insert into table places **/
-INSERT INTO places (code, id_price, id_booking) VALUES (0213654789,1,1),(0011223565,2,1),(5465213256,3,1)
+INSERT INTO places (code, id_price, id_booking) VALUES ('0sldk54789',1,1),('0011223565',2,1),('5465213256',3,2),('sjd21d5s6q',3,4),('sj25475s6q',3,3)
 
 
 
