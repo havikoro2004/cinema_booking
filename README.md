@@ -16,7 +16,7 @@ réserver au choix dans l'un d'entre eux.
 * Dans un cinéma, peut-il y avoir le passage du même film au même horaire dans plusieurs salles
 différentes ?
 Oui, cela arrive dans certains de nos complexes pour les blockbusters les plus rentables !
-*Désirez-vous que vos clients puissent choisir leur place?
+* Désirez-vous que vos clients puissent choisir leur place?
 Pas nécessairement. Néanmoins, il faudra bien faire attention au nombre de places disponibles dans une
 salle!
 * Quels tarifs possibles?
